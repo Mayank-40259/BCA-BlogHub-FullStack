@@ -1,0 +1,118 @@
+/* Midnight Tech Theme Variables */
+:root {
+  --bg-color: #0b0f19;       /* Deep space dark background */
+  --card-bg: #151d30;       /* Lighter navy-dark for cards */
+  --text-main: #f8fafc;     /* Bright crisp white text */
+  --text-muted: #94a3b8;    /* Soft silver text */
+  --primary: #6366f1;       /* Electric indigo glow */
+  --primary-hover: #4f46e5;
+  --border-color: #232e48;  /* Subtle dark border */
+}
+
+/* Global Reset with Dark Theme Defaults */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* Typography styling */
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 24px;
+}
+
+/* Premium Dark Glowing Form Container */
+.form-container {
+  max-width: 1000px;
+  background: var(--card-bg);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  padding: 40px;
+}
+
+/* Neon Inputs and Textareas */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 14px 18px;
+  background-color: #0b0f19;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  font-size: 1rem;
+  color: var(--text-main);
+  transition: all 0.2s ease;
+}
+
+input[type="text"]::placeholder,
+textarea::placeholder {
+  color: #4b5563;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.25);
+  outline: none;
+  background-color: #0d1527;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* Modern Post Cards for Dashboard */
+.post-card {
+  background: var(--card-bg);
+  padding: 32px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary);
+}
+
+/* Glowing Tech Button */
+.btn-primary {
+  width: 100%;
+  padding: 14px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+}

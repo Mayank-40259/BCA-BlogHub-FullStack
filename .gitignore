@@ -1,0 +1,29 @@
+# Heavy Dependencies
+node_modules/
+backend/node_modules/
+frontend/node_modules/
+
+# Environment Variables & Passwords (Most Important)
+.env
+backend/.env
+frontend/.env
+
+# Production Builds
+frontend/dist/
+frontend/build/
+
+# IDE and System Files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
