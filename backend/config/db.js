@@ -8,14 +8,20 @@ const sequelize = new Sequelize(
   {
     host: process.env.DB_HOST,
     dialect: 'mysql',
-    logging: false, // Console clear rakhne ke liye
+    logging: false,
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false // Cloud database certificates verify karne ke liye
+      }
+    }
   }
 );
 
 const connectDB = async () => {
   try {
     await sequelize.authenticate();
-    console.log('✔ MySQL Database Connected Successfully!');
+    console.log('✔ MySQL Database Connected Successfully via Sequelize!');
   } catch (error) {
     console.error('❌ Database Connection Failed:', error.message);
     process.exit(1);
